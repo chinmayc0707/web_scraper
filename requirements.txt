@@ -8,3 +8,4 @@ python-dotenv
 duckduckgo-search
 fpdf2
 requests
+Flask

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-styled Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Fallback fonts if Circular/SpotifyMix aren't available locally -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="#1ed760">
+                        <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.54.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.18-1.2-.181-1.38-.781-.18-.6.18-1.2.78-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+                    </svg>
+                    <span>Chatify</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"/>
+                    </svg>
+                    New Chat
+                </a>
+                <a href="#" class="nav-item">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path d="M10.533 1.27893C10.8507 1.10686 11.2368 1.05996 11.5831 1.15545L20.5831 3.63378C21.2187 3.8087 21.6022 4.47596 21.4273 5.11162L19.4273 12.385C19.2524 13.0206 18.5851 13.4042 17.9495 13.2292L16.2736 12.768L12.5512 20.3546C12.3392 20.7865 11.9056 21.0583 11.4243 21.0772C10.9429 21.0961 10.4908 20.8587 10.2974 20.4324L7.8465 15.0219L3.58572 13.6826C3.12513 13.5378 2.82582 13.1119 2.81223 12.6311C2.79864 12.1502 3.07347 11.705 3.5222 11.48L10.533 1.27893ZM12.115 3.23849L6.50285 11.4116L9.62002 12.391C9.87321 12.4705 10.0768 12.6644 10.1587 12.9169L11.5283 17.1354L14.4079 11.2676L11.5831 10.49L12.115 3.23849Z"/>
+                    </svg>
+                    Recent Searches
+                </a>
+            </nav>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-recent">
+                <a href="#" class="recent-item">React UI Components</a>
+                <a href="#" class="recent-item">Python asyncio patterns</a>
+                <a href="#" class="recent-item">Dark mode design</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-nav">
+                    <button class="icon-button back-button">
+                        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                            <path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"/>
+                        </svg>
+                    </button>
+                    <button class="icon-button forward-button">
+                        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                            <path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-actions">
+                    <button class="pill-button light">Upgrade</button>
+                    <button class="icon-button user-profile">
+                        <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                            <path d="M8 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5.5a5 5 0 1 1 10 0 5 5 0 0 1-10 0z"/>
+                            <path d="M12.25 11.25a.75.75 0 0 0-.75.75 3.5 3.5 0 0 1-7 0 .75.75 0 0 0-1.5 0 5 5 0 0 0 10 0 .75.75 0 0 0-.75-.75z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-scroll-area" id="chat-messages">
+                    <!-- Welcome / Empty State -->
+                    <div class="welcome-state">
+                        <h1>What do you want to explore?</h1>
+                        <div class="suggestions-grid">
+                            <div class="suggestion-card" onclick="setInput('Explain how quantum computing works')">
+                                <span class="suggestion-title">Explain</span>
+                                <span class="suggestion-desc">Quantum computing</span>
+                            </div>
+                            <div class="suggestion-card" onclick="setInput('Write a Python script for web scraping')">
+                                <span class="suggestion-title">Code</span>
+                                <span class="suggestion-desc">Web scraping in Python</span>
+                            </div>
+                            <div class="suggestion-card" onclick="setInput('Draft an email to a potential client')">
+                                <span class="suggestion-title">Write</span>
+                                <span class="suggestion-desc">Draft a client email</span>
+                            </div>
+                            <div class="suggestion-card" onclick="setInput('Summarize the plot of Inception')">
+                                <span class="suggestion-title">Summarize</span>
+                                <span class="suggestion-desc">The plot of Inception</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input Area -->
+                <div class="input-area">
+                    <div class="input-container">
+                        <textarea id="chat-input" placeholder="Message Chatify..." rows="1" oninput="autoResize(this)"></textarea>
+                        <button class="send-button circular-play" id="send-button">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="#000000">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="input-disclaimer">
+                        Chatify can make mistakes. Check important info.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
