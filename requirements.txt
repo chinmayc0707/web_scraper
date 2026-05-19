@@ -8,3 +8,10 @@ python-dotenv
 duckduckgo-search
 fpdf2
 requests
+
+mcp
+langchain-mcp-adapters
+langgraph-checkpoint-postgres
+psycopg[binary]
+psycopg-pool
+langchain-openrouter
