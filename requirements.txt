@@ -1,0 +1,10 @@
+playwright
+langchain
+langchain-openai
+openai
+pydantic
+beautifulsoup4
+python-dotenv
+duckduckgo-search
+fpdf2
+requests
