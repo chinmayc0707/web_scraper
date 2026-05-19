@@ -1,0 +1,18 @@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.2:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 631-326-424
+127.0.0.1 - - [19/May/2026 08:44:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:44:39] "GET /products HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:45:51] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:45:51] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:46:07] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:46:07] "GET /static/css/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:46:08] "GET /products HTTP/1.1" 200 -
+127.0.0.1 - - [19/May/2026 08:46:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -

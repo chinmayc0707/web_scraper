@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="section-light" style="padding-top: var(--spacing-xl);">
+        <div class="container">
+            <h1 class="display-xl" style="margin-bottom: var(--spacing-sm);">All Products</h1>
+            <p class="body-md" style="margin-bottom: var(--spacing-2xl);">Browse our complete collection of spiritual and pooja materials.</p>
+
+            <div class="product-grid">
+                {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <h3 class="display-sm">{{ product.name }}</h3>
+                    <p class="body-md">{{ product.description }}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: var(--spacing-md);">
+                        <span class="body-md-strong">{{ product.price }}</span>
+                        <a href="#" class="btn button-primary">Add to cart</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Materials</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Load Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-left">
+            <a href="/" class="nav-brand">Pooja Materials</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/products" class="nav-link">Shop</a>
+                <a href="#" class="nav-link">About</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="btn button-subtle">Log in</a>
+            <a href="#" class="btn button-primary">Sign up</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4 class="body-md-strong">Pooja Materials</h4>
+                <a href="#" class="link-mute">Visit Help Center</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="body-md-strong">Company</h4>
+                <a href="#" class="link-mute">About us</a>
+                <a href="#" class="link-mute">Our offerings</a>
+                <a href="#" class="link-mute">Newsroom</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="body-md-strong">Products</h4>
+                <a href="#" class="link-mute">Incense</a>
+                <a href="#" class="link-mute">Diyas</a>
+                <a href="#" class="link-mute">Kits</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

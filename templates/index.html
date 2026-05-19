@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Hero Band Light -->
+    <section class="section-light">
+        <div class="container">
+            <div style="display: flex; gap: var(--spacing-3xl); align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 class="display-xxl" style="margin-bottom: var(--spacing-xl);">Spiritual essentials delivered to your door</h1>
+                    <p class="body-lg" style="margin-bottom: var(--spacing-2xl);">Get premium quality pooja materials for your daily rituals and special occasions.</p>
+                    <a href="/products" class="btn button-primary">Shop now</a>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <div class="card-elevated" style="aspect-ratio: 4/3; background-color: var(--colors-canvas-soft); display: flex; align-items: center; justify-content: center;">
+                        <img src="https://placehold.co/800x600/efefef/000000?text=Pooja+Items" alt="Pooja items" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--rounded-md);">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Promo Band (Polarity Flip) -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="promo-card-on-dark">
+                <div class="promo-image">
+                    <img src="https://placehold.co/800x600/282828/ffffff?text=Festival+Kits" alt="Festival Kits">
+                </div>
+                <div class="promo-content">
+                    <h2 class="display-xl">Complete Festival Kits</h2>
+                    <p class="body-lg">Everything you need for Diwali, Navratri, and other major festivals in one convenient package.</p>
+                    <div>
+                        <a href="#" class="btn button-secondary">Explore kits</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Light Feature Card Band -->
+    <section class="section-light">
+        <div class="container">
+            <h2 class="display-xl" style="margin-bottom: var(--spacing-2xl);">Featured Products</h2>
+            <div class="product-grid">
+                {% for product in featured_products %}
+                <div class="product-card">
+                    <img src="{{ product.image }}" alt="{{ product.name }}">
+                    <h3 class="display-sm">{{ product.name }}</h3>
+                    <p class="body-md">{{ product.description }}</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: auto;">
+                        <span class="body-md-strong">{{ product.price }}</span>
+                        <a href="#" class="btn button-subtle">Add to cart</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
