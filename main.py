@@ -394,7 +394,7 @@ Conversation:
 
 if __name__ == "__main__":
 
-    DB_URI = "postgresql://postgres.rskdxiqyevrkgozeuqhx:Chinmayc0707@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres"
+    DB_URI = os.getenv('DB_URL')
     llm=ChatOpenRouter(model='google/gemma-4-31b-it:free',api_key=os.getenv('OPENROUTER_API_KEY'))
     tools=asyncio.run(get_tools())
     agent = PersistentMemoryAgent(
